@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lesson 1 · What are Git, GitHub & VS Code?</title>
+  <script>
+    tailwind = {"config": {}};
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="scripts/theme-toggle.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+
+  <header class="border-b bg-white/70 dark:bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 shadow-sm border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-[0_12px_30px_rgba(99,102,241,0.4)] dark:shadow-[0_12px_30px_rgba(99,102,241,0.6)]">
+          G
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
+        <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">1 Intro</a>
+        <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub & SSH</a>
+        <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
+        <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Host</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
+          <span class="hidden dark:inline">🌞 Light</span>
+          <span class="dark:hidden">🌙 Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden py-16 md:py-20 px-6 text-center">
+    <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <div class="w-[480px] h-[480px] rounded-full bg-gradient-to-br from-indigo-100 via-white to-transparent dark:from-indigo-500/20 dark:via-transparent dark:to-transparent blur-3xl opacity-60"></div>
+    </div>
+
+    <div class="relative">
+      <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full px-3 py-1 text-[11px] font-medium text-gray-600 dark:text-gray-300 shadow-sm mb-4">
+        <span class="text-indigo-600 dark:text-indigo-400">Lesson 1</span>
+        <span class="text-gray-300 dark:text-gray-600">•</span>
+        <span>Foundations</span>
+        <span class="text-gray-300 dark:text-gray-600">•</span>
+        <span>No coding yet 👶</span>
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex flex-col md:flex-row md:items-center md:justify-center gap-3">
+        <span class="flex items-center gap-2 justify-center">
+          <img src="images/git-logo.svg" class="w-8 h-8" alt="Git"/>
+          What are Git, GitHub &amp; VS Code?
+          <img src="images/vscode-logo.svg" class="w-8 h-8" alt="VS Code"/>
+        </span>
+      </h1>
+
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+        This is the “what is it” lesson. After this, you&apos;ll be able to explain these tools in normal language, not tech jargon.
+      </p>
+    </div>
+
+    <div class="relative mx-auto max-w-xl mt-10">
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl p-6 flex flex-col items-center">
+        <div class="flex flex-wrap items-center justify-center gap-4 text-left w-full max-w-md">
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-lg bg-[#f05133] text-white text-[10px] font-bold flex items-center justify-center shadow-[0_12px_30px_rgba(240,81,51,0.4)]">Git</div>
+            <div class="text-[12px] leading-tight">
+              <div class="font-semibold text-gray-900 dark:text-gray-100">Local history</div>
+              <div class="text-gray-500 dark:text-gray-400">Track every change</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-lg bg-black text-white text-[10px] font-bold flex items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.4)]">GH</div>
+            <div class="text-[12px] leading-tight">
+              <div class="font-semibold text-gray-900 dark:text-gray-100">GitHub</div>
+              <div class="text-gray-500 dark:text-gray-400">Online teamwork</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-lg bg-[#0078d4] text-white text-[10px] font-bold flex items-center justify-center shadow-[0_12px_30px_rgba(0,120,212,0.4)]">VS</div>
+            <div class="text-[12px] leading-tight">
+              <div class="font-semibold text-gray-900 dark:text-gray-100">VS Code</div>
+              <div class="text-gray-500 dark:text-gray-400">Where you write code</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200 dark:bg-gray-800 my-6"></div>
+
+        <p class="text-[12px] leading-relaxed text-gray-600 dark:text-gray-400 max-w-md text-left">
+          Together: you build code in VS Code → Git saves versions safely → GitHub lets you and your team work on it from anywhere.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6 pb-24">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition">
+      <img src="images/git-logo.svg" alt="Git Logo" class="w-10 h-10 mx-auto mb-3"/>
+      <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 text-center">Git</h2>
+      <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-center">
+        Git is a <strong>version control system</strong>. It keeps a timeline of your project on your own computer.
+        You can go back in time, or branch off and try ideas safely.
+      </p>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6 text-center text-[11px] text-gray-500 dark:text-gray-400">
+        Screenshot placeholder: Git history / commits timeline
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition">
+      <img src="images/github-logo.svg" alt="GitHub Logo" class="w-10 h-10 mx-auto mb-3"/>
+      <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 text-center">GitHub</h2>
+      <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-center">
+        GitHub is where you put your Git project <strong>online</strong>.
+        Now teammates can see it, suggest changes, comment, and contribute.
+      </p>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6 text-center text-[11px] text-gray-500 dark:text-gray-400">
+        Screenshot placeholder: GitHub repo page with file list &amp; README
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition">
+      <img src="images/vscode-logo.svg" alt="VS Code Logo" class="w-10 h-10 mx-auto mb-3"/>
+      <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 text-center">Visual Studio Code</h2>
+      <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-center">
+        VS Code is your workspace. You write code here, preview, commit, and push to GitHub directly.
+      </p>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6 text-center text-[11px] text-gray-500 dark:text-gray-400">
+        Screenshot placeholder: VS Code editor with Source Control panel
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Why these 3 matter 💡</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+        Every pro dev uses this stack. Git protects your work. GitHub connects you with the world.
+        VS Code is where the magic actually happens.
+      </p>
+
+      <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson2.html">
+        Continue to Lesson 2 →
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
+    Lesson 1 • © 2025 Git Workshop
+  </footer>
+
+</body>
+</html>

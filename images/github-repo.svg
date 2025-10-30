@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Illustration of a GitHub repository file list">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <g transform="translate(100 90)" fill="#111827">
+    <rect x="0" y="0" width="1000" height="520" rx="18" fill="#0f172a" opacity="0.04"/>
+    <rect x="28" y="28" width="420" height="22" rx="6" fill="#e6eef8"/>
+    <rect x="28" y="64" width="920" height="12" rx="6" fill="#f3f4f6"/>
+    <rect x="28" y="88" width="920" height="12" rx="6" fill="#f3f4f6"/>
+    <rect x="28" y="112" width="920" height="12" rx="6" fill="#f3f4f6"/>
+    <rect x="28" y="136" width="920" height="12" rx="6" fill="#f3f4f6"/>
+    <rect x="28" y="170" width="920" height="12" rx="6" fill="#f3f4f6"/>
+    <rect x="28" y="204" width="920" height="12" rx="6" fill="#f3f4f6"/>
+  </g>
+  <g transform="translate(100 420)" fill="#374151" font-family="Inter, Arial, sans-serif">
+    <text x="0" y="0" font-size="38" font-weight="600">GitHub repository</text>
+    <text x="0" y="36" font-size="18" fill="#6b7280">File list and README preview</text>
+  </g>
+</svg>

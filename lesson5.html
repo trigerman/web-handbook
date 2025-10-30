@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lesson 5 · Host Your Project</title>
+  <script>
+    tailwind = {"config": {}};
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="scripts/theme-toggle.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+
+  <header class="border-b bg-white/70 dark:bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 shadow-sm border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-[0_12px_30px_rgba(99,102,241,0.4)] dark:shadow-[0_12px_30px_rgba(99,102,241,0.6)]">
+          G
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
+        <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
+        <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub & SSH</a>
+        <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
+        <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">5 Host</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
+          <span class="hidden dark:inline">🌞 Light</span>
+          <span class="dark:hidden">🌙 Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="text-center py-16 px-6">
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center justify-center gap-3">
+      <img src="images/globe-icon.svg" class="w-10 h-10" alt="Globe"/>
+      Lesson 5: Host Your Project on GitHub Pages
+    </h1>
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+      Push your code, flip on Pages, get a real URL. Then (optional) connect your own domain.
+    </p>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/upload-icon.svg" class="w-8 h-8" alt="Upload"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 1 — Push Your Project</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Put your site files (HTML, CSS, JS, etc.) in a Git repo, commit, and push:
+    </p>
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-6">
+      <code>git add .</code><br />
+      <code>git commit -m "Initial commit"</code><br />
+      <code>git push origin main</code>
+    </div>
+    <img src="images/git-push.png" alt="Git push screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/server-icon.svg" class="w-8 h-8" alt="Server"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 2 — Turn On GitHub Pages</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      In your GitHub repo: <strong>Settings → Pages</strong>.<br/>
+      Under <strong>Source</strong>, choose <strong>Main</strong> branch and <strong>/root</strong>, then save.
+    </p>
+    <img src="images/github-pages-settings.png" alt="GitHub Pages settings screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
+      After a moment, GitHub builds and serves your site at:
+    </p>
+    <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-center py-3 text-indigo-700 dark:text-indigo-400 font-semibold mt-4 break-all">
+      https://your-username.github.io/your-repository-name
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/check-icon.svg" class="w-8 h-8" alt="Check"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 3 — Confirm It’s Live</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Visit your URL. If you see your homepage, congrats — you&apos;re public!
+    </p>
+    <img src="images/github-pages-success.png" alt="Live site screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/globe-icon.svg" class="w-8 h-8" alt="Globe"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 4 — (Optional) Use Your Own Domain</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Buy a domain (like <em>mycoolsite.com</em>). Add a file called <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.8em]">CNAME</code> to your repo with just that domain in it:
+    </p>
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-6">
+      <code>echo "mycoolsite.com" &gt; CNAME</code><br />
+      <code>git add CNAME &amp;&amp; git commit -m "Add custom domain" &amp;&amp; git push</code>
+    </div>
+    <img src="images/github-custom-domain.png" alt="Custom domain screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
+      Then update DNS at your domain provider to point to GitHub Pages.
+    </p>
+  </section>
+
+  <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You did it 🌐</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+        You started from zero, learned Git, pushed to GitHub, collaborated with a team, and shipped a live site to the internet.
+        This is a real developer workflow.
+      </p>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
+    Lesson 5 • © 2025 Git Workshop
+  </footer>
+
+</body>
+</html>

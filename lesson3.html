@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lesson 3 · GitHub Account & SSH Keys</title>
+  <script>
+    tailwind = {"config": {}};
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="scripts/theme-toggle.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+
+  <header class="border-b bg-white/70 dark:bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 shadow-sm border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-[0_12px_30px_rgba(99,102,241,0.4)] dark:shadow-[0_12px_30px_rgba(99,102,241,0.6)]">
+          G
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
+        <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
+        <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">3 GitHub & SSH</a>
+        <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
+        <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Host</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
+          <span class="hidden dark:inline">🌞 Light</span>
+          <span class="dark:hidden">🌙 Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="text-center py-16 px-6">
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center justify-center gap-3">
+      <img src="images/github-logo.svg" alt="GitHub Logo" class="w-10 h-10"/>
+      Lesson 3: Create GitHub, Set SSH Keys, Connect VS Code
+    </h1>
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+      We&apos;ll create a GitHub account, set your identity in Git, generate SSH keys, and sign in from VS Code.
+    </p>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/github-logo.svg" class="w-8 h-8" alt="GitHub"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 1 — Create Your GitHub Account</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Go to <a href="https://github.com" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">github.com</a>,
+      click <strong>Sign Up</strong>, choose a username, password, and verify your email.
+    </p>
+    <img src="images/github-signup.png" alt="GitHub Signup Screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/git-logo.svg" class="w-8 h-8" alt="Git"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 2 — Tell Git Who You Are</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Set your global username and email:
+    </p>
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-4">
+      <code>git config --global user.name "Your Name"</code><br />
+      <code>git config --global user.email "you@example.com"</code>
+    </div>
+    <img src="images/git-config.png" alt="Git config screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/key-icon.svg" class="w-8 h-8" alt="Key icon"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 3 — Generate an SSH Key</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      SSH keys let you push/pull code without typing your password each time.
+    </p>
+
+    <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-3 mb-6">
+      <li>Open your terminal (Git Bash on Windows).</li>
+      <li>Run this command (use your GitHub email):</li>
+    </ol>
+
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-4">
+      <code>ssh-keygen -t ed25519 -C "you@example.com"</code>
+    </div>
+
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Press Enter to accept the default file path. You can set a passphrase (recommended).
+    </p>
+
+    <img src="images/ssh-generate.png" alt="SSH keygen screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2">
+      Now display your public key:
+    </p>
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-4">
+      <code>cat ~/.ssh/id_ed25519.pub</code>
+    </div>
+
+    <img src="images/ssh-key-view.png" alt="Public key screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
+      Copy that output. In GitHub, go to
+      <strong>Settings → SSH and GPG keys → New SSH key</strong>,
+      paste it, and click <strong>Add SSH key</strong>.
+    </p>
+
+    <img src="images/github-add-ssh.png" alt="GitHub add SSH key screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/vscode-logo.svg" class="w-8 h-8" alt="VS Code"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 4 — Sign In to VS Code with GitHub</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Open VS Code → bottom-left profile icon → <strong>Sign in with GitHub</strong>. Approve the login.
+    </p>
+    <img src="images/vscode-github-login.png" alt="VS Code GitHub login screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <img src="images/github-logo.svg" class="w-8 h-8" alt="GitHub"/>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 5 — Test Your Connection</h2>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      Run this:
+    </p>
+    <div class="bg-gray-900 text-gray-100 font-mono text-sm rounded-lg p-4 mb-6">
+      <code>ssh -T git@github.com</code>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
+      If you see something like “Hi username! You’ve successfully authenticated,” you&apos;re good.
+    </p>
+    <img src="images/github-ssh-success.png" alt="SSH success screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
+  </section>
+
+  <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Your computer can talk to GitHub 🔐</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+        Now you can push code to GitHub from VS Code with your identity attached. Next: teamwork and branches.
+      </p>
+
+      <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson4.html">
+        Continue to Lesson 4 →
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
+    Lesson 3 • © 2025 Git Workshop
+  </footer>
+
+</body>
+</html>
