@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Lesson 2 · Install Git & VS Code</title>
+  <title>Lesson 2 &middot; Install Git &amp; VS Code</title>
   <script>
     tailwind = {"config": {}};
   </script>
@@ -25,23 +25,23 @@
         </div>
         <div class="flex flex-col leading-tight">
           <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
-          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition &middot; 2025</span>
         </div>
       </div>
 
       <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
         <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
         <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">2 Install</a>
-        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub & SSH</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub &amp; SSH</a>
         <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
         <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Host</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">&larr; Home</a>
         <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
-          <span class="hidden dark:inline">🌞 Light</span>
-          <span class="dark:hidden">🌙 Dark</span>
+          <span class="hidden dark:inline">&#9728; Light</span>
+          <span class="dark:hidden">&#9790; Dark</span>
         </button>
       </div>
     </div>
@@ -54,72 +54,134 @@
       <img src="images/vscode-logo.svg" class="w-10 h-10" alt="VS Code"/>
     </h1>
     <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-      We&apos;ll install Git and VS Code on macOS, Linux, and Windows. Then we&apos;ll confirm everything works.
+      We&apos;ll install Git and VS Code on macOS, Linux, and Windows. Then we&apos;ll confirm everything works so you can ship code with confidence.
     </p>
   </section>
 
   <section class="max-w-6xl mx-auto px-6 py-10">
     <div class="flex justify-center items-center gap-3 mb-6">
       <img src="images/git-logo.svg" alt="Git Logo" class="w-10 h-10"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 1 — Install Git</h2>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 1 &middot; Install Git</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 text-center transition">
-        <img src="images/macos-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="macOS logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">macOS</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-          Use Homebrew to install Git:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>brew install git</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/macos-logo.svg" class="w-10 h-10" alt="macOS logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">macOS</h3>
         </div>
-        <img src="images/hq720.jpg" alt="Installing Git on macOS" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm mb-4"/>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left">
-          Check it worked:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>git --version</code></pre>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <div>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Use Homebrew to install Git:
+            </p>
+            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>brew install git</code></pre>
+            </div>
+          </div>
+
+          <img src="images/hq720.jpg" alt="Installing Git on macOS" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
+
+          <div>
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Check it worked:</p>
+            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 text-center transition">
-        <img src="images/linux-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="Linux logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Linux</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-          On Ubuntu / Debian:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>sudo apt-get install git</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/linux-logo.svg" class="w-10 h-10" alt="Linux logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Linux</h3>
         </div>
-        <img src="images/har_4_1.png" alt="Installing Git on Linux" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm mb-4"/>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left">
-          Verify:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>git --version</code></pre>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <div>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              On Ubuntu / Debian:
+            </p>
+            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>sudo apt-get install git</code></pre>
+            </div>
+          </div>
+
+          <img src="images/har_4_1.png" alt="Installing Git on Linux" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
+
+          <div>
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify:</p>
+            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 text-center transition">
-        <img src="images/windows-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="Windows logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Windows</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-          Download Git for Windows from 
-          <a href="https://git-scm.com/download/win" class="text-indigo-600 dark:text-indigo-400 hover:underline">git-scm.com</a>,
-          run the installer.
-        </p>
-        <img src="images/complete-git-install-windows.png" alt="Git installer on Windows" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm mb-4"/>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left">
-          Then open Git Bash and run:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>git --version</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/windows-logo.svg" class="w-10 h-10" alt="Windows logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Windows</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            Download Git for Windows from
+            <a href="https://git-scm.com/download/win" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">git-scm.com</a>
+            and run the installer.
+          </p>
+
+          <img src="images/complete-git-install-windows.png" alt="Git installer on Windows" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
+
+          <div>
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Then open Git Bash and run:</p>
+            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">Git&nbsp;Bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -128,55 +190,117 @@
   <section class="max-w-6xl mx-auto px-6 py-10">
     <div class="flex justify-center items-center gap-3 mb-6">
       <img src="images/vscode-logo.svg" alt="VS Code Logo" class="w-10 h-10"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 2 — Install Visual Studio Code</h2>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 2 &middot; Install Visual Studio Code</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition text-center">
-        <img src="images/macos-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="macOS logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">macOS</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-          Download from 
-          <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline">code.visualstudio.com/download</a>.
-        </p>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left">Verify:</p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>code --version</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/macos-logo.svg" class="w-10 h-10" alt="macOS logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">macOS</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 text-left flex-1">
+          <div class="space-y-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Download VS Code from
+              <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
+            <img src="images/VSMac.png" alt="Visual Studio Code on macOS" class="w-full h-full object-cover"/>
+          </div>
+          <div class="space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify the command line launcher:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>code --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition text-center">
-        <img src="images/linux-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="Linux logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Linux</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-          Install via Snap:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>sudo snap install code --classic</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/linux-logo.svg" class="w-10 h-10" alt="Linux logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Linux</h3>
         </div>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left mt-4">Then:</p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>code --version</code></pre>
+        <div class="mt-6 flex flex-col gap-6 text-left flex-1">
+          <div class="space-y-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Install via Snap:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>sudo snap install code --classic</code></pre>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
+            <img src="images/VSLinux.png" alt="VS Code on Linux after install" class="w-full h-full object-cover"/>
+          </div>
+
+          <div class="space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Then confirm:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>code --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md p-6 transition text-center">
-        <img src="images/windows-logo.svg" class="w-10 h-10 mx-auto mb-2" alt="Windows logo"/>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Windows</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-          Download for Windows from 
-          <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline">code.visualstudio.com/download</a>,
-          run installer.
-        </p>
-        <p class="text-sm text-gray-700 dark:text-gray-300 text-left">
-          Then:
-        </p>
-        <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mt-2">
-          <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-          <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-3 pr-16 font-mono text-sm"><code>code --version</code></pre>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/windows-logo.svg" class="w-10 h-10" alt="Windows logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Windows</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 text-left flex-1">
+          <div class="space-y-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Download the Windows build from
+              <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>
+              and run the installer.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
+            <img src="images/VSWindows.png" alt="Installing VS Code on Windows" class="w-full h-full object-cover"/>
+          </div>
+          <div class="space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify from Git Bash or PowerShell:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">shell</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>code --version</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -184,19 +308,19 @@
 
   <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You're ready to develop 🧠</h2>
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You&apos;re ready to build</h2>
       <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
-        Git is installed. VS Code is installed. Your machine is ready. Next we link your computer to GitHub so you can push code.
+        Git is installed. VS Code is installed. Your machine is primed for real projects. Next we&apos;ll connect everything to GitHub so you can push, pull, and collaborate.
       </p>
 
       <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson3.html">
-        Continue to Lesson 3 →
+        Continue to Lesson 3 &rarr;
       </a>
     </div>
   </section>
 
   <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
-    Lesson 2 • © 2025 Git Workshop
+    Lesson 2 &middot; &copy; 2025 Git Workshop
   </footer>
 
 </body>
