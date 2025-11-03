@@ -71,11 +71,11 @@
           <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">macOS</h3>
         </div>
         <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
-          <div>
+          <div class="flex flex-col justify-between gap-3 h-[150px]">
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Use Homebrew to install Git:
             </p>
-            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
               <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
                 <span class="flex items-center gap-1.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -89,11 +89,13 @@
             </div>
           </div>
 
-          <img src="images/hq720.jpg" alt="Installing Git on macOS" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/hq720.jpg" alt="Installing Git on macOS" class="max-h-full w-auto object-contain"/>
+          </div>
 
-          <div>
+          <div class="space-y-3">
             <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Check it worked:</p>
-            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
               <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
                 <span class="flex items-center gap-1.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -115,11 +117,12 @@
           <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Linux</h3>
         </div>
         <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
-          <div>
+          <div class="space-y-3">
+          <div class="flex flex-col justify-between gap-3 h-[150px]">
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               On Ubuntu / Debian:
             </p>
-            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
               <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
                 <span class="flex items-center gap-1.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -132,12 +135,15 @@
               <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>sudo apt-get install git</code></pre>
             </div>
           </div>
+          </div>
 
-          <img src="images/har_4_1.png" alt="Installing Git on Linux" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/har_4_1.png" alt="Installing Git on Linux" class="max-h-full w-auto object-contain"/>
+          </div>
 
-          <div>
+          <div class="space-y-3">
             <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify:</p>
-            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
               <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
                 <span class="flex items-center gap-1.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -159,17 +165,32 @@
           <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Windows</h3>
         </div>
         <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Download Git for Windows from
-            <a href="https://git-scm.com/download/win" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">git-scm.com</a>
-            and run the installer.
-          </p>
+          <div class="flex flex-col justify-between gap-3 h-[150px]">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Download Git for Windows from
+              <a href="https://git-scm.com/download/win" class="whitespace-nowrap text-indigo-600 dark:text-indigo-400 hover:underline font-medium">git-scm.com</a>
+              and run the installer.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">Git&nbsp;Bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git --version</code></pre>
+            </div>
+          </div>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/complete-git-install-windows.png" alt="Git installer on Windows" class="max-h-full w-auto object-contain"/>
+          </div>
 
-          <img src="images/complete-git-install-windows.png" alt="Git installer on Windows" class="w-full h-44 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm object-contain bg-slate-900/40 p-4"/>
-
-          <div>
+          <div class="space-y-3">
             <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Then open Git Bash and run:</p>
-            <div class="relative mt-3 rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
               <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
                 <span class="flex items-center gap-1.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -203,11 +224,11 @@
           <div class="space-y-3">
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Download VS Code from
-              <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>.
+              <a href="https://code.visualstudio.com/download" class="whitespace-nowrap text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>.
             </p>
           </div>
-          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
-            <img src="images/VSMac.png" alt="Visual Studio Code on macOS" class="w-full h-full object-cover"/>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/VSMac.png" alt="Visual Studio Code on macOS" class="max-h-full w-auto object-contain"/>
           </div>
           <div class="space-y-3">
             <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify the command line launcher:</p>
@@ -248,8 +269,8 @@
               <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>sudo snap install code --classic</code></pre>
             </div>
           </div>
-          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
-            <img src="images/VSLinux.png" alt="VS Code on Linux after install" class="w-full h-full object-cover"/>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/VSLinux.png" alt="VS Code on Linux after install" class="max-h-full w-auto object-contain"/>
           </div>
 
           <div class="space-y-3">
@@ -276,15 +297,13 @@
           <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Windows</h3>
         </div>
         <div class="mt-6 flex flex-col gap-6 text-left flex-1">
-          <div class="space-y-3">
-            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Download the Windows build from
-              <a href="https://code.visualstudio.com/download" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>
-              and run the installer.
-            </p>
-          </div>
-          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/60 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden">
-            <img src="images/VSWindows.png" alt="Installing VS Code on Windows" class="w-full h-full object-cover"/>
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            Download the Windows build from
+            <a href="https://code.visualstudio.com/download" class="whitespace-nowrap text-indigo-600 dark:text-indigo-400 hover:underline font-medium">code.visualstudio.com</a>
+            and run the installer.
+          </p>
+          <div class="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/40 shadow-inner shadow-indigo-500/10 h-44 overflow-hidden flex items-center justify-center">
+            <img src="images/VSWindows.png" alt="Installing VS Code on Windows" class="max-h-full w-auto object-contain"/>
           </div>
           <div class="space-y-3">
             <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify from Git Bash or PowerShell:</p>
