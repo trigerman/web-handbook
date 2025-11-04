@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Lesson 3 · GitHub Account & SSH Keys</title>
+  <title>Lesson 3 &middot; GitHub Account &amp; SSH Keys</title>
   <script>
     tailwind = {"config": {}};
   </script>
@@ -25,23 +25,23 @@
         </div>
         <div class="flex flex-col leading-tight">
           <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
-          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition &middot; 2025</span>
         </div>
       </div>
 
       <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
         <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
         <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
-        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">3 GitHub & SSH</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">3 GitHub &amp; SSH</a>
         <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
         <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Host</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">&larr; Home</a>
         <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
-          <span class="hidden dark:inline">🌞 Light</span>
-          <span class="dark:hidden">🌙 Dark</span>
+          <span class="hidden dark:inline">&#9728; Light</span>
+          <span class="dark:hidden">&#9790; Dark</span>
         </button>
       </div>
     </div>
@@ -57,122 +57,199 @@
     </p>
   </section>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/github-logo.svg" class="w-8 h-8" alt="GitHub"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 1 — Create Your GitHub Account</h2>
+  <section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="space-y-12">
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/github-logo.svg" alt="GitHub logo" class="w-9 h-9"/>
+              <span>Step 1</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Create your GitHub account</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Go to <a href="https://github.com" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">github.com</a>, click <strong>Sign Up</strong>, and follow the prompts.
+            </p>
+            <ul class="list-disc pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
+              <li>Choose a memorable username and secure password.</li>
+              <li>Verify your email when GitHub sends the confirmation message.</li>
+            </ul>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/githubsignup.png" alt="GitHub signup screen" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/git-logo.svg" alt="Git logo" class="w-9 h-9"/>
+              <span>Step 2</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Tell Git who you are</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Run these commands once so every commit is tagged with your name and email.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Use the same email address you signed up with on GitHub so commits link to your profile.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/gitsave.png" alt="Saving Git identity in the terminal" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-start">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/key-icon.svg" alt="Key icon" class="w-9 h-9"/>
+              <span>Step 3</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Generate an SSH key</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              SSH keys let you push and pull code without typing your GitHub password each time.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Open your terminal (Git Bash on Windows) and run:
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>ssh-keygen -t ed25519 -C "you@example.com"</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Press Enter to accept the default location. Add a passphrase for extra security if you want.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Then show the public key so you can copy it:
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              In GitHub, go to <strong>Settings &rarr; SSH and GPG keys &rarr; New SSH key</strong>, paste the copied key, and save.
+            </p>
+          </div>
+          <div class="md:flex-1 grid gap-6">
+            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 overflow-hidden">
+              <img src="images/gitssh.png" alt="Generating an SSH key" class="w-full h-full object-contain"/>
+            </div>
+            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 overflow-hidden">
+              <img src="images/sshkey.png" alt="Viewing the SSH public key" class="w-full h-full object-contain"/>
+            </div>
+            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 overflow-hidden">
+              <img src="images/addssh.png" alt="Adding an SSH key in GitHub settings" class="w-full h-full object-contain"/>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/vscode-logo.svg" alt="VS Code logo" class="w-9 h-9"/>
+              <span>Step 4</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Sign in to VS Code with GitHub</h2>
+            <ul class="list-disc pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1 leading-relaxed">
+              <li>Open VS Code and click the profile icon in the bottom-left corner.</li>
+              <li>Select <strong>Sign in with GitHub</strong> and approve the login in your browser.</li>
+              <li>Tip: you can also press <code class="font-mono">F1</code> (or <code class="font-mono">Ctrl+Shift+P</code>) and run <strong>GitHub: Sign in</strong>.</li>
+            </ul>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/gitvslogin.png" alt="Signing in to GitHub from VS Code" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/github-logo.svg" alt="GitHub logo" class="w-9 h-9"/>
+              <span>Step 5</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Test your connection</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Run the SSH test command. GitHub should greet you by username if everything is wired up.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>ssh -T git@github.com</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              If you see "Hi username! You&apos;ve successfully authenticated," you&apos;re ready to push code.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/githsuccess.png" alt="Successful SSH connection to GitHub" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
     </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Go to <a href="https://github.com" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">github.com</a>,
-      click <strong>Sign Up</strong>, choose a username, password, and verify your email.
-    </p>
-    <img src="images/githubsignup.png" alt="GitHub Signup Screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/git-logo.svg" class="w-8 h-8" alt="Git"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 2 — Tell Git Who You Are</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Set your global username and email:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>git config --global user.name "Your Name"&#10;git config --global user.email "you@example.com"</code></pre>
-      </div>
-    <img src="images/gitsave.png" alt="Git config screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/key-icon.svg" class="w-8 h-8" alt="Key icon"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 3 — Generate an SSH Key</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      SSH keys let you push/pull code without typing your password each time.
-    </p>
-
-    <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 text-sm md:text-base space-y-3 mb-6">
-      <li>Open your terminal (Git Bash on Windows).</li>
-      <li>Run this command (use your GitHub email):</li>
-    </ol>
-
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>ssh-keygen -t ed25519 -C "you@example.com"</code></pre>
-      </div>
-
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Press Enter to accept the default file path. You can set a passphrase (recommended).
-    </p>
-
-    <img src="images/gitssh.png" alt="SSH keygen screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-2">
-      Now display your public key:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>cat ~/.ssh/id_ed25519.pub</code></pre>
-      </div>
-
-    <img src="images/sshkey.png" alt="Public key screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
-      Copy that output. In GitHub, go to
-      <strong>Settings → SSH and GPG keys → New SSH key</strong>,
-      paste it, and click <strong>Add SSH key</strong>.
-    </p>
-
-    <img src="images/addssh.png" alt="GitHub add SSH key screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/vscode-logo.svg" class="w-8 h-8" alt="VS Code"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 4 — Sign In to VS Code with GitHub</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Open VS Code → bottom-left profile icon → <strong>Sign in with GitHub</strong>. Approve the login.
-    </p>
-    <img src="images/gitvslogin.png" alt="VS Code GitHub login screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/github-logo.svg" class="w-8 h-8" alt="GitHub"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 5 — Test Your Connection</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Run this:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-6">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>ssh -T git@github.com</code></pre>
-      </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      If you see something like “Hi username! You’ve successfully authenticated,” you&apos;re good.
-    </p>
-    <img src="images/githsuccess.png" alt="SSH success screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
   </section>
 
   <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Your computer can talk to GitHub 🔐</h2>
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Your computer can talk to GitHub</h2>
       <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
-        Now you can push code to GitHub from VS Code with your identity attached. Next: teamwork and branches.
+        Git knows who you are, VS Code is connected, and SSH is ready. Next up: collaborating with a team.
       </p>
 
       <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson4.html">
-        Continue to Lesson 4 →
+        Continue to Lesson 4 &rarr;
       </a>
     </div>
   </section>
 
   <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
-    Lesson 3 • © 2025 Git Workshop
+    Lesson 3 &middot; &copy; 2025 Git Workshop
   </footer>
 
 </body>
 </html>
+
+
