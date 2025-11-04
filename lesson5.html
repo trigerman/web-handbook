@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Lesson 5 · Host Your Project</title>
+  <title>Lesson 5 &middot; Host Your Project</title>
   <script>
     tailwind = {"config": {}};
   </script>
@@ -25,23 +25,23 @@
         </div>
         <div class="flex flex-col leading-tight">
           <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
-          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition &middot; 2025</span>
         </div>
       </div>
 
       <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
         <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
         <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
-        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub & SSH</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub &amp; SSH</a>
         <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 Team</a>
         <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">5 Host</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">&larr; Home</a>
         <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
-          <span class="hidden dark:inline">🌞 Light</span>
-          <span class="dark:hidden">🌙 Dark</span>
+          <span class="hidden dark:inline">&#9728; Light</span>
+          <span class="dark:hidden">&#9790; Dark</span>
         </button>
       </div>
     </div>
@@ -49,91 +49,111 @@
 
   <section class="text-center py-16 px-6">
     <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center justify-center gap-3">
-      <img src="images/globe-icon.svg" class="w-10 h-10" alt="Globe"/>
+      <img src="images/globe-icon.svg" alt="Globe" class="w-10 h-10"/>
       Lesson 5: Host Your Project on GitHub Pages
     </h1>
     <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-      Push your code, flip on Pages, get a real URL. Then (optional) connect your own domain.
+      Get your site online: push the code, enable Pages, verify the deployment, and show it to the world.
     </p>
   </section>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/upload-icon.svg" class="w-8 h-8" alt="Upload"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 1 — Push Your Project</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Put your site files (HTML, CSS, JS, etc.) in a Git repo, commit, and push:
-    </p>
-    <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-6">
-      <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-      <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>git add .
+  <section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="space-y-12">
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/upload-icon.svg" alt="Upload icon" class="w-9 h-9"/>
+              <span>Step 1</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Push your project</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Stage everything, commit, and push so GitHub has the files it needs to serve.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git add .
 git commit -m "Initial commit"
 git push origin main</code></pre>
-    </div>
-    <img src="images/git-push.png" alt="Git push screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Make sure <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.85em]">main</code> is the branch you use for deployment.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/Gitcommit.png" alt="Committing changes in the terminal" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/server-icon.svg" class="w-8 h-8" alt="Server"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 2 — Turn On GitHub Pages</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      In your GitHub repo: <strong>Settings → Pages</strong>.<br/>
-      Under <strong>Source</strong>, choose <strong>Main</strong> branch and <strong>/root</strong>, then save.
-    </p>
-    <img src="images/github-pages-settings.png" alt="GitHub Pages settings screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
-      After a moment, GitHub builds and serves your site at:
-    </p>
-    <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-center py-3 text-indigo-700 dark:text-indigo-400 font-semibold mt-4 break-all">
-      <a href="https://your-username.github.io/your-repository-name" target="_blank" rel="noopener noreferrer" class="hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-md px-1">https://your-username.github.io/your-repository-name</a>
-    </div>
-  </section>
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/server-icon.svg" alt="Server icon" class="w-9 h-9"/>
+              <span>Step 2</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Turn on GitHub Pages</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Pages will build and host your static site in minutes.
+            </p>
+            <ol class="list-decimal pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
+              <li>Open <strong>Settings &rarr; Pages</strong> in your repository.</li>
+              <li>Set <strong>Source</strong> to <strong>Main</strong> and <strong>/root</strong>, then save.</li>
+              <li>Wait for the green checkmark that confirms the build succeeded.</li>
+            </ol>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Your site will be available at <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.85em]">https://username.github.io/repository</code>.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/githubpages.png" alt="Enabling GitHub Pages" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/check-icon.svg" class="w-8 h-8" alt="Check"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 3 — Confirm It’s Live</h2>
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/check-icon.svg" alt="Check icon" class="w-9 h-9"/>
+              <span>Step 3</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Confirm it&apos;s live</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Visit the Pages URL and make sure your homepage loads as expected.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Seeing GitHub&apos;s 404 page? Wait a minute and refresh&mdash;builds and DNS take a moment to finish. Yes, this tutorial is hosted on GitHub Pages too.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/gitio.png" alt="Live GitHub Pages site" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
     </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Visit your URL. If you see your homepage, congrats — you&apos;re public!
-    </p>
-    <img src="images/github-pages-success.png" alt="Live site screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/globe-icon.svg" class="w-8 h-8" alt="Globe"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 4 — (Optional) Use Your Own Domain</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Buy a domain (like <em>mycoolsite.com</em>). Add a file called <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.8em]">CNAME</code> to your repo with just that domain in it:
-    </p>
-    <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-6">
-      <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-      <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>echo "mycoolsite.com" &gt; CNAME
-git add CNAME &amp;&amp; git commit -m "Add custom domain" &amp;&amp; git push</code></pre>
-    </div>
-    <img src="images/github-custom-domain.png" alt="Custom domain screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base">
-      Then update DNS at your domain provider to point to GitHub Pages.
-    </p>
   </section>
 
   <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You did it 🌐</h2>
-      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed">
-        You started from zero, learned Git, pushed to GitHub, collaborated with a team, and shipped a live site to the internet.
-        This is a real developer workflow.
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You shipped it!</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+        From installing Git to launching a production URL, you now have the end-to-end workflow of a modern developer. Share your Pages link&mdash;this tutorial lives there too, and yours can keep evolving with every push.
       </p>
     </div>
   </section>
 
   <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
-    Lesson 5 • © 2025 Git Workshop
+    Lesson 5 &middot; &copy; 2025 Git Workshop
   </footer>
 
 </body>

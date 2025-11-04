@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Lesson 4 · Team Collaboration</title>
+  <title>Lesson 4 &middot; Team Collaboration</title>
   <script>
     tailwind = {"config": {}};
   </script>
@@ -25,23 +25,23 @@
         </div>
         <div class="flex flex-col leading-tight">
           <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
-          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition · 2025</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition &middot; 2025</span>
         </div>
       </div>
 
       <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
         <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
         <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
-        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub & SSH</a>
+        <a href="lesson3.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">3 GitHub &amp; SSH</a>
         <a href="lesson4.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">4 Team</a>
         <a href="lesson5.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Host</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">← Home</a>
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">&larr; Home</a>
         <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
-          <span class="hidden dark:inline">🌞 Light</span>
-          <span class="dark:hidden">🌙 Dark</span>
+          <span class="hidden dark:inline">&#9728; Light</span>
+          <span class="dark:hidden">&#9790; Dark</span>
         </button>
       </div>
     </div>
@@ -49,107 +49,183 @@
 
   <section class="text-center py-16 px-6">
     <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center justify-center gap-3">
-      <img src="images/team-icon.svg" alt="Team Icon" class="w-10 h-10"/>
+      <img src="images/team-icon.svg" alt="Team icon" class="w-10 h-10"/>
       Lesson 4: Add Teammates &amp; Work Together
     </h1>
     <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-      You&apos;ll create a repo, invite collaborators, clone it locally, create branches, and open pull requests.
+      Spin up a shared repo, invite your classmates, collaborate on branches, and merge through pull requests.
     </p>
   </section>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/github-logo.svg" class="w-8 h-8" alt="GitHub"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 1 — Create a New Repository</h2>
+  <section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="space-y-12">
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/github-logo.svg" alt="GitHub logo" class="w-9 h-9"/>
+              <span>Step 1</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Create a fresh repository</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Head to <a href="https://github.com/new" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">github.com/new</a> and set up a space for your team.
+            </p>
+            <ul class="list-disc pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
+              <li>Give the project a clear name everyone recognises.</li>
+              <li>Pick <strong>Public</strong> for open work or <strong>Private</strong> for class-only projects.</li>
+              <li>Leave the README unchecked we&apos;ll add files from our machines.</li>
+            </ul>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/Createrepo.png" alt="Creating a repository on GitHub" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/team-icon.svg" alt="Team icon" class="w-9 h-9"/>
+              <span>Step 2</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Invite your teammates</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Share access so everyone can push, pull, and review without roadblocks.
+            </p>
+            <ol class="list-decimal pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
+              <li>Open <strong>Settings &rarr; Collaborators</strong> inside the repo.</li>
+              <li>Click <strong>Add people</strong> and search by GitHub username or email.</li>
+              <li>Send the invite the teammates accept it from their email or GitHub inbox.</li>
+            </ol>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/addcollaborator.png" alt="Adding a collaborator in GitHub" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/vscode-logo.svg" alt="VS Code logo" class="w-9 h-9"/>
+              <span>Step 3</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Clone the repo locally</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Grab the SSH URL so your local copy stays in sync with GitHub.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git clone git@github.com:username/repository-name.git</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Swap in your actual GitHub username and repository name before you run the command.
+            </p>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/gitclone.png" alt="Running git clone in the terminal" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-start">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/branch-icon.svg" alt="Branch icon" class="w-9 h-9"/>
+              <span>Step 4</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Branch for every change</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Keep <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.85em]">main</code> production-ready by working from feature branches.
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git checkout -b feature-branch-name</code></pre>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Commit your work, then publish the branch so the team can review it:
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>git push origin feature-branch-name</code></pre>
+            </div>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/gitpush.png" alt="Viewing branches in GitHub" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-10 md:items-center">
+          <div class="md:w-2/5 space-y-4">
+            <div class="flex items-center gap-3 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-[0.3em]">
+              <img src="images/pr-icon.svg" alt="Pull request icon" class="w-9 h-9"/>
+              <span>Step 5</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">Open a pull request</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
+              Merge through review so teammates can double-check changes before they land in main.
+            </p>
+            <ol class="list-decimal pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
+              <li>On GitHub, click <strong>Compare &amp; pull request</strong> after pushing your branch.</li>
+              <li>Describe what you did and request reviewers.</li>
+              <li>Address feedback, then merge when everyone approves.</li>
+            </ol>
+          </div>
+          <div class="md:flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 bg-slate-900/30 dark:bg-slate-800/30 shadow-inner shadow-indigo-500/10 min-h-[240px] overflow-hidden flex items-center justify-center">
+            <img src="images/github-create-new-pull-request.png" alt="Creating a pull request on GitHub" class="w-full h-full object-contain"/>
+          </div>
+        </div>
+      </article>
     </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Go to <a href="https://github.com/new" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">github.com/new</a>.
-      Name your project, choose Public or Private, and create the repo.
-    </p>
-    <img src="images/github-new-repo.png" alt="GitHub Create Repo screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/team-icon.svg" class="w-8 h-8" alt="Team"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 2 — Add Teammates</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      In your new repo: <strong>Settings → Collaborators</strong> → “Add people”.
-      Invite classmates by GitHub username or email. They&apos;ll get an invite to accept.
-    </p>
-    <img src="images/github-add-collaborator.png" alt="Add collaborator screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/vscode-logo.svg" class="w-8 h-8" alt="VS Code"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 3 — Clone the Repo</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Everyone on the team should clone the repo locally. In terminal:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-6">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>git clone git@github.com:username/repository-name.git</code></pre>
-      </div>
-    <img src="images/git-clone.png" alt="git clone screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/branch-icon.svg" class="w-8 h-8" alt="Branch icon"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 4 — Create a Feature Branch</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      Don&apos;t all edit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.8em]">main</code> directly.
-      Make a branch for each feature or fix:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-4">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>git checkout -b feature-branch-name</code></pre>
-      </div>
-
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      After committing, push your branch:
-    </p>
-      <div class="relative bg-gray-900 text-gray-100 rounded-lg text-left mb-6">
-        <button type="button" class="copy-button absolute top-2 right-2 text-[10px] uppercase tracking-wide bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
-        <pre class="m-0 whitespace-pre-wrap overflow-x-auto p-4 pr-16 font-mono text-sm"><code>git push origin feature-branch-name</code></pre>
-      </div>
-
-    <img src="images/git-branches.png" alt="Git branches screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
-  </section>
-
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex justify-center items-center gap-3 mb-6">
-      <img src="images/pr-icon.svg" class="w-8 h-8" alt="Pull Request icon"/>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Step 5 — Open a Pull Request</h2>
-    </div>
-    <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
-      On GitHub, open a Pull Request from your branch into <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-[0.8em]">main</code>.
-      Teammates review, comment, and approve before merge.
-    </p>
-    <img src="images/github-pull-request.png" alt="Pull request screenshot" class="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md w-full md:w-3/4 mx-auto mb-8"/>
   </section>
 
   <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">You’re working like a real dev 🤝</h2>
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Now you&apos;re collaborating like a team</h2>
       <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
-        You can now collaborate with a team: invite, clone, branch, push, review, merge.
-        Final step: put your work on the internet so anyone can see it.
+        Repo created, invites sent, branches flowing, reviews happening. One more step and your project will ship to the web.
       </p>
 
       <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson5.html">
-        Continue to Lesson 5 →
+        Continue to Lesson 5 &rarr;
       </a>
     </div>
   </section>
 
   <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
-    Lesson 4 • © 2025 Git Workshop
+    Lesson 4 &middot; &copy; 2025 Git Workshop
   </footer>
 
 </body>
 </html>
+
+
