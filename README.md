@@ -1,6 +1,6 @@
 # Git Workshop — Student Edition
 
-A beginner-friendly, multi-page learning site that teaches **Git**, **GitHub**, **VS Code**, **Node.js**, and **HAXTheWeb** step-by-step — from installation to collaboration and publishing with **GitHub Pages**.
+A beginner-friendly, multi-page learning site that teaches **Git**, **GitHub**, **VS Code**, **Node.js**, and **HAXTheWeb** step-by-step from installation to collaboration and publishing with **GitHub Pages**.
 
 ## 📚 Course Contents
 
@@ -15,15 +15,6 @@ A beginner-friendly, multi-page learning site that teaches **Git**, **GitHub**, 
 
 ## Live Site
 
-**Visit the site:** [https://trigerman.github.io/](https://trigerman.github.io/)
+**Visit the site:** [https://trigerman.github.io/](https://trigerman.github.io/git-workshop-site)
 
----
-
-## Quick Start Guides
-
-### For Students
-Start with [Lesson 1](https://trigerman.github.io/lesson1.html) and progress through the interactive course.
-
-### For Instructors
-Use the [Node.js & HAXTheWeb Setup Guide](nodejs-haxtheweb-setup.md) as a standalone resource or integrate it into your curriculum.
 
