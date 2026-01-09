@@ -192,7 +192,7 @@ npm install -g npm@latest
 - **Node.js Documentation:** [https://nodejs.org/docs/latest/api/](https://nodejs.org/docs/latest/api/)
 - **npm Documentation:** [https://docs.npmjs.com/](https://docs.npmjs.com/)
 - **HAXTheWeb GitHub:** [https://github.com/haxtheweb/](https://github.com/haxtheweb/)
-- **Complete Visual Guide:** [https://trigerman.github.io/lesson3-nodejs.html](https://trigerman.github.io/lesson3-nodejs.html)
+- **Complete Visual Guide:** [https://trigerman.github.io/web-handbook](https://trigerman.github.io/web-handbook)
 
 ---
 
