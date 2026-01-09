@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lesson 3 &middot; Install Node.js &amp; HAXTheWeb</title>
+  <script>
+    tailwind = {"config": {}};
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="scripts/theme-toggle.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+
+  <header class="border-b bg-white/70 dark:bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 shadow-sm border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-[0_12px_30px_rgba(99,102,241,0.4)] dark:shadow-[0_12px_30px_rgba(99,102,241,0.6)]">
+          G
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-base text-gray-900 dark:text-gray-100">Git Workshop</span>
+          <span class="text-[11px] text-gray-500 dark:text-gray-400">Student Edition &middot; 2026</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-5 text-xs sm:text-sm font-medium">
+        <a href="lesson1.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">1 Intro</a>
+        <a href="lesson2.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">2 Install</a>
+        <a href="lesson3-nodejs.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">3 Node.js</a>
+        <a href="lesson4-github.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">4 GitHub</a>
+        <a href="lesson5-team.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">5 Team</a>
+        <a href="lesson6-host.html" class="transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 text-gray-600 dark:text-gray-300">6 Host</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-medium">&larr; Home</a>
+        <button onclick="toggleTheme()" class="text-[11px] px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:border-indigo-400 dark:hover:border-indigo-400 transition">
+          <span class="hidden dark:inline">&#9728; Light</span>
+          <span class="dark:hidden">&#9790; Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="text-center py-16 px-6">
+    <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full px-3 py-1 text-[11px] font-medium text-gray-600 dark:text-gray-300 shadow-sm mb-4">
+      <span class="text-indigo-600 dark:text-indigo-400">Lesson 3</span>
+      <span class="text-gray-300 dark:text-gray-600">&bull;</span>
+      <span>Development Environment</span>
+      <span class="text-gray-300 dark:text-gray-600">&bull;</span>
+      <span>Node.js &amp; HAXTheWeb</span>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center justify-center gap-3">
+      <svg class="w-10 h-10" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="256" height="256" rx="28" fill="#68A063"/>
+        <path d="M128 32L32 80v96l96 48 96-48V80L128 32z" fill="#fff" opacity="0.3"/>
+        <path d="M128 48L48 88v80l80 40 80-40V88L128 48z" fill="#fff"/>
+      </svg>
+      Install Node.js &amp; HAXTheWeb
+    </h1>
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+      Node.js is a JavaScript runtime that lets you run JavaScript outside the browser. 
+      We&apos;ll install it and then set up <strong>HAXTheWeb</strong> — a powerful tool for creating modern web experiences.
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <svg class="w-10 h-10" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="256" height="256" rx="28" fill="#68A063"/>
+        <path d="M128 32L32 80v96l96 48 96-48V80L128 32z" fill="#fff" opacity="0.3"/>
+        <path d="M128 48L48 88v80l80 40 80-40V88L128 48z" fill="#fff"/>
+      </svg>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 1 &middot; Install Node.js</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- macOS -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/macos-logo.svg" class="w-10 h-10" alt="macOS logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">macOS</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <div class="min-h-[180px] flex flex-col gap-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Use Homebrew to install Node.js:
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>brew install node</code></pre>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Verify Node.js installation:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">zsh</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>node --version
+npm --version</code></pre>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400">You should see version numbers like <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">v20.x.x</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">10.x.x</code></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linux -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/linux-logo.svg" class="w-10 h-10" alt="Linux logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Linux</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <div class="min-h-[180px] flex flex-col gap-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              On Ubuntu / Debian, use NodeSource:
+            </p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs</code></pre>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Check installation:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">bash</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>node --version
+npm --version</code></pre>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400">You should see version numbers like <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">v20.x.x</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">10.x.x</code></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Windows -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition p-6 flex flex-col">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="images/windows-logo.svg" class="w-10 h-10" alt="Windows logo"/>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Windows</h3>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 flex-1 text-left">
+          <div class="min-h-[180px] flex flex-col gap-3">
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Download Node.js from
+              <a href="https://nodejs.org/" class="whitespace-nowrap text-indigo-600 dark:text-indigo-400 hover:underline font-medium">nodejs.org</a>
+            </p>
+            <ul class="list-disc pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+              <li>Click the <strong>LTS (Long Term Support)</strong> version</li>
+              <li>Run the downloaded <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">.msi</code> installer</li>
+              <li>Accept defaults and click <strong>Next</strong> through the wizard</li>
+              <li>Check "Automatically install necessary tools" if prompted</li>
+              <li>Click <strong>Finish</strong></li>
+            </ul>
+          </div>
+
+          <div class="mt-6 space-y-3">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Open PowerShell or Git Bash and verify:</p>
+            <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">PowerShell</span>
+              </div>
+              <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+              <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>node --version
+npm --version</code></pre>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400">You should see version numbers like <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">v20.x.x</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">10.x.x</code></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAXTheWeb Section -->
+  <section class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex justify-center items-center gap-3 mb-6">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-lg font-bold flex items-center justify-center shadow-lg">
+        H
+      </div>
+      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Part 2 &middot; Install HAXTheWeb</h2>
+    </div>
+
+    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-purple-200 dark:border-gray-700 shadow-lg p-8 mb-8">
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-2xl font-bold flex items-center justify-center shadow-lg">
+            H
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">What is HAXTheWeb?</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
+            <strong>HAXTheWeb</strong> is a powerful web authoring system that makes it easy to create modern, accessible websites and web experiences. 
+            It provides a visual editor with drag-and-drop capabilities while generating clean, standards-based HTML.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            The <code class="bg-white dark:bg-gray-800 px-2 py-0.5 rounded font-mono text-xs">@haxtheweb/create</code> tool scaffolds new HAX projects with best practices built-in.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-8">
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Install HAXTheWeb globally (all platforms)</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+        This command works the same on macOS, Linux, and Windows. Open your terminal and run:
+      </p>
+
+      <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden mb-6">
+        <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+          <span class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">terminal</span>
+        </div>
+        <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+        <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>npm install --global @haxtheweb/create</code></pre>
+      </div>
+
+      <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 text-blue-600 dark:text-blue-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-1">Installation Note</h4>
+            <p class="text-sm text-blue-800 dark:text-blue-400">
+              This might take a minute or two as npm downloads and installs the HAXTheWeb tools. You&apos;ll see progress indicators in your terminal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 mt-8">Verify the installation</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+        Check that HAXTheWeb is installed correctly:
+      </p>
+
+      <div class="relative rounded-xl border border-slate-800 bg-[#0b1220] text-slate-100 shadow-lg shadow-indigo-500/10 overflow-hidden mb-4">
+        <div class="flex items-center gap-2 px-4 py-2 pr-20 border-b border-slate-800 bg-gradient-to-r from-slate-900/80 to-slate-800/60">
+          <span class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400">terminal</span>
+        </div>
+        <button type="button" class="copy-button absolute top-2 right-3 text-[10px] uppercase tracking-[0.25em] bg-indigo-500/80 hover:bg-indigo-400 text-white px-3 py-1 rounded-md transition focus:outline-none focus:ring-2 focus:ring-indigo-300">Copy</button>
+        <pre class="m-0 px-4 py-3 font-mono text-sm leading-relaxed whitespace-pre overflow-x-auto"><code>npm list -g @haxtheweb/create</code></pre>
+      </div>
+
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-8">
+        You should see output showing the installed version of <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">@haxtheweb/create</code>
+      </p>
+
+      <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 text-green-600 dark:text-green-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-sm font-semibold text-green-900 dark:text-green-300 mb-1">Success!</h4>
+            <p class="text-sm text-green-800 dark:text-green-400">
+              You now have Node.js, npm, and HAXTheWeb installed. You&apos;re ready to create modern web projects!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Steps -->
+  <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 px-6 text-center border-y border-indigo-100/60 dark:border-gray-800/60">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-3">Development environment ready! 🚀</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+        You&apos;ve got Node.js and HAXTheWeb installed. Your machine is now ready for modern web development.
+        Next, we&apos;ll connect to GitHub so you can share your work with the world.
+      </p>
+
+      <a class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 text-sm font-medium rounded-lg shadow-[0_20px_40px_rgba(99,102,241,0.4)] dark:shadow-[0_20px_40px_rgba(99,102,241,0.6)] inline-block" href="lesson4-github.html">
+        Continue to Lesson 4 &rarr;
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-gray-500 dark:text-gray-400 text-[11px]">
+    <div class="mb-3">
+      <a href="https://outlook.office.com/bookwithme/user/fbdcd4e0a5f246a0842422ce3521b2d1@psu.edu?anonymous&ismsaljsauthenabled&ep=plink" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:underline font-medium text-xs">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Need Help? Book a Doubt Session
+      </a>
+    </div>
+    Lesson 3 &middot; &copy; 2026 Git Workshop
+  </footer>
+
+</body>
+</html>
+
