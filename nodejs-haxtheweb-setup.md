@@ -2,8 +2,6 @@
 
 A comprehensive guide for installing Node.js and HAXTheWeb's `@haxtheweb/create` tool across macOS, Linux, and Windows.
 
-> **Full Interactive Version:** For a complete guide with images, copy buttons, and detailed explanations, visit [Git Workshop - Lesson 3: Node.js & HAXTheWeb](https://trigerman.github.io/lesson3-nodejs.html)
-
 ---
 
 ## What You'll Install
